@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>PaintJS</title>
+	<style>
+		html, body, canvas {
+			padding: 0;
+			margin: 0;
+		}
+		body {
+			background-color: #ddd;
+		}
+		canvas {
+			position: absolute;
+			top: 0;
+			left: 80px;
+			background-color: #fff;
+		}
+		#sidebar {
+			width: 65px;
+		}
+		.button {
+			width: 30px;
+			height: 30px;
+		}
+		#black {
+			background-color: #000;
+			border: none;
+		}
+		#grey {
+			background-color: #808080;
+			border: none;
+		}
+		#red {
+			background-color: #800000;
+			border: none;
+		}
+		#mauve {
+			background-color: #800080;
+			border: none;
+		}
+		#yellow {
+			background-color: #808000;
+			border: none;
+		}
+		#green {
+			background-color: #008000;
+			border: none;
+		}
+		#blue {
+			background-color: #000080;
+			border: none;
+		}
+		#teel {
+			background-color: #008080;
+			border: none;
+		}
+	</style>
+</head>
+<body>
+	<div id="sidebar">
+		<button type="button" class="button tools" onclick="setSelectedTool('rectangle')">[]</button>
+		<button type="button" class="button tools" onclick="setSelectedTool('square')">#</button>
+		<button type="button" class="button tools" onclick="setSelectedTool('circle')">()</button>
+		<button type="button" class="button tools" onclick="setSelectedTool('line')">/</button>
+		<button type="button" class="button tools" onclick="state.undo()">&lt;</button>
+		<button type="button" class="button tools" onclick="state.redo()">&gt;</button>
+		<button type="button" class="button color" id="black" onclick="setColor('#000000')"></button>
+		<button type="button" class="button color" id="grey" onclick="setColor('#808080')"></button>
+		<button type="button" class="button color" id="red" onclick="setColor('#800000')"></button>
+		<button type="button" class="button color" id="mauve" onclick="setColor('#800080')"></button>
+		<button type="button" class="button color" id="yellow" onclick="setColor('#808000')"></button>
+		<button type="button" class="button color" id="green" onclick="setColor('#008000')"></button>
+		<button type="button" class="button color" id="blue" onclick="setColor('#000080')"></button>
+		<button type="button" class="button color" id="teel" onclick="setColor('#008080')"></button>
+	</div>
+	<canvas id="paint">
+		To use this app, please make sure "load scripts" is checked in your browser settings.
+	</canvas>
+	<script type="text/javascript" src="script.js"></script>
+</body>
+</html>
